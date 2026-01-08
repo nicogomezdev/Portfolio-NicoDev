@@ -1,0 +1,150 @@
+
+.aboutMe{
+    display: flex;
+    justify-content: center;
+    
+}
+.aboutMe h2{
+    margin-top: 60px;
+    font-size: 50px;
+    margin: 20px auto 5px auto;
+}
+.Containerleft{
+  padding-left: -15px;
+}
+
+.aboutMeContent{
+    display: flex;
+    justify-content: space-between;
+    gap: 150px;
+    width: 70%;
+    padding: 10px 200px;
+}
+.aboutImg{
+    width: 25%;
+    height: auto;
+    margin-left: 55px;
+}
+.TittleText{
+  color: white;
+}
+.aboutTxt{
+    display: block;
+    width: 75%;
+    font-weight: 600;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+.aboutTxt h2{
+    font-weight: 800;
+    font-size: 45px;
+    padding-bottom: 20px;
+    color: var(--color-electrico);
+}
+.aboutTxt p{
+    text-align:start;
+    line-height: 3.5ch;
+    font-size: 19px;
+    color: rgb(184, 253, 255);
+}
+.aboutTxt span{
+    color: var(--color-electrico);
+}
+.aboutMeContent Img{
+    display: flex;
+    align-items: center;
+    height: 300px;
+    width: auto;
+    padding-bottom: 20px;
+    padding-left:15px;
+    border-radius: 150px;
+    margin: 20px 0 10px 0;
+    opacity: 1;
+    margin: 10px solid rgb(102, 204, 255);
+}
+
+.aboutImg p{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.waveText {
+  font-size: 32px;
+  font-weight: 600;
+  background: linear-gradient(
+    90deg,
+    red,
+    yellow,
+    var(--color-electrico),
+    #00ff00,
+    red
+  );
+
+  background-size: 400%;
+  background-position: 0% 50%;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: wave 3s linear infinite alternate;
+}
+
+@keyframes wave {
+  0%   {  background-position: 0% 50%; }
+  to   { background-position: 100% 50%; }
+}
+
+.icon{
+    width: 40px;
+    height:40px;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.icon path{
+    fill: currentColor;
+}
+.cv{
+  color: var(--color-electrico);}
+  
+
+
+.borderAnim {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.borderAnim::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    orange, var(--color-electrico)
+  );
+  background-size: 400%;
+  animation: borderMove 5s linear infinite;
+
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+}
+
+@keyframes borderMove {
+   from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 400% 50%;
+  }
+}
+
