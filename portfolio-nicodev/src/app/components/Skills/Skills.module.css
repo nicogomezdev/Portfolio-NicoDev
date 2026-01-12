@@ -16,3 +16,9 @@
         color: rgba(2, 0, 36, 0.9);
       font-size: 100px;
 }
+
+@media(max-width:420px){
+  .SkillTxt{
+  font-size: 70px;
+}
+}

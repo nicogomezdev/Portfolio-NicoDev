@@ -1,78 +1,73 @@
-
 .aboutMe{
     display: flex;
     justify-content: center;
-    
 }
 .aboutMe h2{
-    margin-top: 60px;
-    font-size: 50px;
-    margin: 20px auto 5px auto;
+    font-size: clamp(1rem,7vw,3.8rem );
 }
-.Containerleft{
-  padding-left: -15px;
+.aboutImg{
+    width: 40%;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
 }
-
+.aboutImg p{
+    font-size: clamp(0.8rem,1.8vw,2.5rem);
+  }
 .aboutMeContent{
     display: flex;
     justify-content: space-between;
-    gap: 150px;
-    width: 70%;
-    padding: 10px 200px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
-.aboutImg{
-    width: 25%;
-    height: auto;
-    margin-left: 55px;
-}
+
+
+
 .TittleText{
   color: white;
+  padding-bottom: clamp(0.8rem,2.4vw,2rem);
+  display: grid;
+  place-items: center;
+
 }
+
 .aboutTxt{
-    display: block;
     width: 75%;
     font-weight: 600;
-    padding-top: 20px;
-    padding-left: 30px;
 }
 .aboutTxt h2{
     font-weight: 800;
-    font-size: 45px;
-    padding-bottom: 20px;
     color: var(--color-electrico);
+    font-size: clamp(0.8rem,2vw,2rem);
 }
 .aboutTxt p{
     text-align:start;
     line-height: 3.5ch;
-    font-size: 19px;
     color: rgb(184, 253, 255);
+    font-size: clamp(0.8rem,1.8vw,2.5rem);
+    
 }
 .aboutTxt span{
     color: var(--color-electrico);
 }
-.aboutMeContent Img{
-    display: flex;
-    align-items: center;
-    height: 300px;
-    width: auto;
-    padding-bottom: 20px;
-    padding-left:15px;
-    border-radius: 150px;
-    margin: 20px 0 10px 0;
-    opacity: 1;
-    margin: 10px solid rgb(102, 204, 255);
+.aboutImg Img{
+    width: 100%;
+    height: auto;
+    border-radius: 30%;
+    margin-bottom: clamp(1rem,2vw,3rem);
+    object-fit: cover;
 }
+
 
 .aboutImg p{
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 27px;
     font-weight: 800;
 }
 
 .waveText {
-  font-size: 32px;
   font-weight: 600;
   background: linear-gradient(
     90deg,
@@ -97,54 +92,43 @@
   to   { background-position: 100% 50%; }
 }
 
-.icon{
-    width: 40px;
-    height:40px;
-    cursor: pointer;
-    padding-top: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+@media(max-width:1920px){
+  .aboutMeContent{
+    gap: 10rem;
+  }
+  .container{
+    padding: 3rem 5rem;
+  }
+  .aboutImg Img{
+    width: 90%;
+    height: 25vw;
+    object-fit: cover;
+  }
 }
-.icon path{
-    fill: currentColor;
+
+@media(max-width:768px){
+  .aboutMeContent{
+    gap: 5rem
+  }
+  .container{
+    padding: 2rem 3.5rem;
+  }
 }
-.cv{
-  color: var(--color-electrico);}
+
+@media(max-width:420px){
+  .aboutMeContent{
+    gap: 1.3rem
+  }
+  .aboutImg{
+    width: 35%;
+  }
   
-
-
-.borderAnim {
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.borderAnim::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  padding: 2px;
-  border-radius: inherit;
-  background: linear-gradient(
-    90deg,
-    orange, var(--color-electrico)
-  );
-  background-size: 400%;
-  animation: borderMove 5s linear infinite;
-
-  mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  -webkit-mask-composite: xor;
-}
-
-@keyframes borderMove {
-   from {
-    background-position: 0% 50%;
+  .container{
+    padding: 1rem 1.5rem;
   }
-  to {
-    background-position: 400% 50%;
+  .aboutImg Img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 }
-

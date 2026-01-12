@@ -1,5 +1,4 @@
 import "./globals.css";
-import Navbar from "./components/Navbar/Navbar";
 import { Open_Sans, Allura } from "next/font/google";
 import Footer from "./components/Footer/Footer";
 
@@ -14,12 +13,20 @@ const allura = Allura({
   variable: "--font-allura",
 });
 
+export const metadata = {
+  title: "NicoDev | Portfolio",
+  description: "Frontend Developer Portfolio",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className={`${openSans.variable} ${allura.variable}`}>
-        <Navbar />
+      <body className={`${openSans.variable} ${allura.variable} `}>
         {children}
         <Footer />
       </body>
