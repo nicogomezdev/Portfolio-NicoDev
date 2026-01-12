@@ -1,0 +1,28 @@
+.skills{
+    overflow: hidden;
+    padding: 40px 0;
+    z-index: 999;
+}
+.cinta{
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 70px;
+  animation: cinta 40s linear infinite;
+  color:#6cf;
+  text-align: center;
+}
+
+
+.skills img{
+    object-fit: cover;
+    height: 100px;
+    
+}
+@keyframes cinta {
+  0% {
+    transform: translateX(0%);
+  }
+100%{
+    transform: translateX(-30%);
+}}

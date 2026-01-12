@@ -1,0 +1,164 @@
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgb(3, 12, 64);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transform: scale(0.96);
+}
+
+.card::before,
+.card::after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #031473;
+  transition: all 0.5s;
+  box-sizing: border-box;
+}
+
+.card::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 100%;
+  
+}
+
+.card::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 100%  0 15px;
+}
+
+.card:hover{
+  transform: translateY(-6px) scale(1.05);
+  overflow: hidden;
+}
+
+.card:hover::before,
+.card:hover:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.5s;
+  border-color: rgb(102, 204, 255);
+}
+.content{
+  color: white;
+}
+
+.card:hover .content{
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.gradientButton {
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  position: relative;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.gradientButton:hover {
+  transform: scale(1.03);
+  
+}
+.card:hover .gradientButton{
+    opacity: 1;
+  pointer-events: auto;
+  
+}
+.gradientButton::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    #ff6b6b,
+    #4ecdc4,
+    #45b7d1,
+    #96ceb4,
+    #feca57,
+    #ff9ff3,
+    #ff6b6b
+  );
+  z-index: -2;
+  filter: blur(10px);
+  transform: rotate(0deg);
+  transition: transform 1.5s ease-in-out;
+}
+
+.gradientButton:hover::before {
+  transform: rotate(180deg);
+  
+}
+
+.gradientButton::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: black;
+  border-radius: 47px;
+  z-index: -1;
+  filter: blur(5px);
+}
+
+.gradientText {
+  color: transparent;
+  background: conic-gradient(
+    from 0deg,
+    #ff6b6b,
+    #4ecdc4,
+    #45b7d1,
+    #96ceb4,
+    #feca57,
+    #ff9ff3,
+    #ff6b6b
+  );
+  background-clip: text;
+  filter: hue-rotate(0deg);
+}
+
+.gradientButton:hover .gradientText {
+  animation: hue-rotating 2s linear infinite;
+  z-index: 999;
+  
+}
+
+.gradientButton:active {
+  transform: scale(0.99);
+}
+
+@keyframes hue-rotating {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+

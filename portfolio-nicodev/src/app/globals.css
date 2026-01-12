@@ -1,0 +1,126 @@
+
+:root {
+  --color-primario: #0424D9;
+  --color-oscuro: #031CA6;
+  --color-medio: #031473;
+  --color--FondoPrin: #030c40;
+  --color--FondoSecun:#0D1326;
+  --color-electrico:rgb(102, 204, 255);
+  --Color--TextoPrincipal:rgb(184, 253, 255);
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+html{
+  font-size: 16px;
+  min-width: 420px;
+}
+
+@media(max-width:420px){
+  html{
+    font-size: 10px
+  }
+  
+}
+
+@media (max-width:768px){
+  
+  html{
+    font-size: 13px;
+  }
+}
+
+@media(max-width: 1920){
+  html{
+    font-size: 16px;
+  }
+  
+}
+
+body{
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: rgb(3, 12, 64);
+  width: 100%;
+}
+
+html,body{
+  overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6{
+  font-size: clamp(2rem,5vw,3rem);
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+p{
+  margin:0;
+}
+
+.container{
+  width: 100%;
+}
+
+
+
+.allura-regular {
+  font-family: "Allura", cursive;
+}
+
+.backgroundAnimate{
+   background: linear-gradient(98deg, #0D1326, #030c40 );
+
+    -webkit-animation: AnimationBackGround 10 s ease infinite;
+    -moz-animation: AnimationBackGround 10s ease infinite;
+    animation: AnimationBackGround 10s ease infinite;
+}
+
+@-webkit-keyframes AnimationBackGround {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationBackGround {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationBackGround {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
