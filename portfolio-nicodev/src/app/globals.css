@@ -70,7 +70,7 @@ html{
 body{
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  background-color: rgb(3, 12, 64);
+  background: linear-gradient(to bottom, #030C40, #0D1326);
   width: 100%;
 }
 

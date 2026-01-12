@@ -11,19 +11,11 @@ import Projects from "./components/Projects/Projects";
 export default function Home() {
   return (
      <main >
-      <section className="backgroundAnimate">
-      <Hero />
-      <div className="container">
+        <Hero />
         <About />
-      </div>
         <Skills />
         <BarSkills />
-        <div className="container">
-          <Projects /> 
-        </div>
-      
-      
-      </section>
+        <Projects /> 
     </main>
   );
 }

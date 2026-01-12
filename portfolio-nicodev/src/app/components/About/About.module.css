@@ -1,7 +1,3 @@
-
-
-  
-
 .aboutMe{
     display: flex;
     justify-content: center;
@@ -26,38 +22,7 @@
     justify-content: center;
 }
 
-@media(max-width:1920px){
-  .aboutMeContent{
-    gap: 10rem
-  }
-  .container{
-    padding: 3rem 5rem;
-  }
-  
-}
 
-@media(max-width:768px){
-  .aboutMeContent{
-    gap: 5rem
-  }
-  .container{
-    padding: 2rem 3.5rem;
-  }
- 
-}
-
-@media(max-width:420px){
-  .aboutMeContent{
-    gap: 1.5rem
-  }
-  .aboutImg{
-    width: 30%;
-  }
-  
-  .container{
-    padding: 1rem 1.5rem;
-  }
-}
 
 .TittleText{
   color: white;
@@ -80,7 +45,8 @@
     text-align:start;
     line-height: 3.5ch;
     color: rgb(184, 253, 255);
-    font-size: clamp(0.8rem,2vw,2.5rem);
+    font-size: clamp(0.8rem,1.8vw,2.5rem);
+    
 }
 .aboutTxt span{
     color: var(--color-electrico);
@@ -126,3 +92,43 @@
   to   { background-position: 100% 50%; }
 }
 
+@media(max-width:1920px){
+  .aboutMeContent{
+    gap: 10rem;
+  }
+  .container{
+    padding: 3rem 5rem;
+  }
+  .aboutImg Img{
+    width: 90%;
+    height: 25vw;
+    object-fit: cover;
+  }
+}
+
+@media(max-width:768px){
+  .aboutMeContent{
+    gap: 5rem
+  }
+  .container{
+    padding: 2rem 3.5rem;
+  }
+}
+
+@media(max-width:420px){
+  .aboutMeContent{
+    gap: 1.3rem
+  }
+  .aboutImg{
+    width: 35%;
+  }
+  
+  .container{
+    padding: 1rem 1.5rem;
+  }
+  .aboutImg Img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
